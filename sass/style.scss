@@ -12,6 +12,15 @@ h1.logo {
   font-size: 4rem;
 }
 
+h1.end {
+  position: relative;
+  color: #fff;
+  opacity: 0;
+  transition: 0.8s ease-in-out;
+  margin: 0 20px;
+
+}
+
 #container {
   height: 100vh;
   display: flex;
@@ -37,6 +46,9 @@ h1.logo {
   overflow: hidden;
   transition: 0.8s ease-in-out;
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0);
+  #next-btn, #prev-btn {
+    color: #fff;
+  }
 }
 
 #next-btn {
@@ -73,7 +85,7 @@ h1.logo {
   position: relative;
   padding: 30px 20px 20px;
   margin: 10px 60px 10px 10px;
-  opacity: 1;
+  opacity: 0;
   transition: opacity 0.3s ease-in-out;
   input {
     position: relative;
@@ -93,6 +105,7 @@ h1.logo {
     font-size: 20px;
     font-weight: bold;
     transition: 0.2 ease-in-out;
+    color: darken($light-gray, 25%);
   }
 
   input:valid + #input-label {
@@ -120,8 +133,8 @@ h1.logo {
 }
 
 .error {
-  #input-progress {
-    border-color: $error-color;
+  #input-group #input-progress {
+    border-bottom: 3px solid $error-color;
   }
   #next-btn {
     color: $error-color;
@@ -134,3 +147,4 @@ h1.logo {
     width: 80%;
   }
 }
+
